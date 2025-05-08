@@ -1,12 +1,40 @@
-import { Button } from "@/components/ui/button"
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import AuthLayout from "./layouts/AuthLayout";
+import Login from "./pages/Login";
+import Landing from "./pages/Landing";
+import Home from "./pages/Home";
+import { ThemeProvider } from "@/components/ui/theme-provider"
 
-
-const App = () => {
+function App() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-svh">
-      <Button>Click me</Button>
-    </div>
-  )
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+    <Router>
+      <Routes>
+        {/* Public routes */}
+        <Route path="/" element={<Landing />} />
+
+        {/* Auth routes */}
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+        </Route>
+
+        {/* Protected routes */}
+        <Route element={<MainLayout />}>
+          <Route path="/home" element={<Home />} />
+        </Route>
+
+        {/* Fallback route */}
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

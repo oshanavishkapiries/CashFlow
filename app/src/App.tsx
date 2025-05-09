@@ -11,10 +11,12 @@ import Landing from "./pages/Landing";
 import Home from "./pages/Home";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 import { ModeToggle } from "./components/ui/mode-toggle";
+import { Toaster } from "@/components/ui/sonner"
 
 function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Toaster position="top-center" />
       <div className="absolute bottom-3 right-3">
         <ModeToggle />
       </div>

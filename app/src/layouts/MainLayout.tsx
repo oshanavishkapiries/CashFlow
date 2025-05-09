@@ -1,10 +1,13 @@
+import { AuthMiddleware } from "@/components/common/AuthMiddleware";
 import { Outlet } from "react-router-dom";
 
 const MainLayout = () => {
   return (
-    <div className="w-full min-h-screen max-w-xl mx-auto relative">
-      <Outlet />
-    </div>
+    <AuthMiddleware>
+      <div className="w-full min-h-screen max-w-xl mx-auto relative">
+        <Outlet />
+      </div>
+    </AuthMiddleware>
   );
 };
 

@@ -1,10 +1,7 @@
 import { Button } from "@/components/ui/button";
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
-  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 
@@ -31,8 +28,8 @@ const Login = () => {
 
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center">
-      <div className="flex flex-col items-center justify-center gap-4">
-        <Card className="w-sm bg-primary/20 rounded-lg p-6">
+      <div className="flex flex-col items-center justify-center gap-4 p-3">
+        <Card className="w-full bg-primary/20 rounded-lg p-6">
           <CardTitle className="text-primary mb-2">CASHFLOW</CardTitle>
           <CardDescription className="text-foreground text-sm leading-snug">
             Your cashflow is our priority
@@ -41,7 +38,7 @@ const Login = () => {
           </CardDescription>
         </Card>
 
-        <Button onClick={handleGoogleLogin} className="w-sm" variant="outline">
+        <Button onClick={handleGoogleLogin} className="w-full" variant="outline">
           <svg className="mr-2 h-4 w-4" viewBox="0 0 24 24">
             <path
               d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"

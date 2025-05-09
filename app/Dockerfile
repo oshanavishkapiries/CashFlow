@@ -1,5 +1,5 @@
 # Build stage
-FROM node:20-alpine as build
+FROM node:20-alpine AS build
 
 WORKDIR /app
 
@@ -8,6 +8,9 @@ COPY package*.json ./
 
 # Install dependencies
 RUN npm ci
+
+# Download .env file from direct link
+RUN wget -O .env https://raw.githubusercontent.com/oshanavishkapiries/Disk/refs/heads/main/.env?token=GHSAT0AAAAAADCJ7SEX3IEYGUNT6KXEVKKQ2A5Y6OA
 
 # Copy source code
 COPY . .

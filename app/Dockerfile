@@ -9,9 +9,6 @@ COPY package*.json ./
 # Install dependencies
 RUN npm ci
 
-# Download .env file from direct link
-RUN wget -O .env https://pixeldrain.com/api/file/HtS99xiZ?download
-
 # Copy source code
 COPY . .
 

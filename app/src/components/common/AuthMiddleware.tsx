@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import type { User } from "firebase/auth";
 import { onAuthStateChange, getCurrentUser } from "@/firebase/auth";
+import { Loader } from "lucide-react";
 
 interface AuthMiddlewareProps {
   children: React.ReactNode;
@@ -43,7 +44,7 @@ export const AuthMiddleware = ({
   if (loading) {
     return (
       <div className="flex items-center justify-center min-h-screen">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+        <Loader className="w-12 h-12 text-primary animate-spin" />
       </div>
     );
   }

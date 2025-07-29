@@ -99,7 +99,7 @@
   --font-sans: Inter, sans-serif;
   --font-serif: serif;
   --font-mono: JetBrains Mono, monospace;
-  --radius: 0.1rem;
+  --radius: 0.3rem;
   --shadow-2xs: 0px 4px 6.5px -1px hsl(0 0% 0% / 0.03);
   --shadow-xs: 0px 4px 6.5px -1px hsl(0 0% 0% / 0.03);
   --shadow-sm: 0px 4px 6.5px -1px hsl(0 0% 0% / 0.05),

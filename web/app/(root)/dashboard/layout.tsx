@@ -36,7 +36,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
     );
   }
 
-  return <div className="w-full flex flex-col min-h-screen">{children}</div>;
+  return <div className="w-full flex flex-col min-h-screen relative">{children}</div>;
 };
 
 export default DashboardLayout;
